@@ -1,17 +1,237 @@
-.product-item {
-	background-color: gray;
-	display: inline-block;
-	height: 25px;
-	padding: 5px;
-	border-radius: 5px;
+body {
+  font-family: Arial, sans-serif;
+  background: #ededed;
+  margin: 0;
+  padding: 0;
 }
 
-.amount {
-	background-color: yellow;
-	border-radius: 10px;
-	
-	display: inline-block;
-	height: 20px;
-	width: 20px;
-	text-align: center;
+.page-bg {
+  padding: 18px;
+  background: #ededed;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.main-list, .summary {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+  padding: 18px 18px 12px 18px;
+}
+
+.main-list {
+  flex: 2;
+  min-width: 340px;
+}
+
+.summary {
+  flex: 1;
+  min-width: 210px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 7px 10px;
+  font-size: 15px;
+  border: 1.2px solid #e0e0e0;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.2s;
+}
+.input-group input:focus {
+  border: 1.2px solid #007bff;
+}
+
+.add-btn {
+  background: #2196f3;
+  color: white;
+  padding: 8px 22px;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  box-shadow: 0 4px 0 #1769aa;
+  transition: background 0.2s;
+  position: relative;
+}
+.add-btn:hover {
+  background: #1976d2;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 0;
+  padding: 10px 0 10px 0;
+  border-bottom: 1px solid #d3d3d3;
+}
+.item:last-child {
+  border-bottom: none;
+}
+
+.item-name {
+  width: 25%;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.crossed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.inline-input {
+	width: 22.5%;
+	padding: 5px 7px;
+  font-size: 15px;
+  border: 1.2px solid #e0e0e0;
+  border-radius: 5px;
+}
+
+.count-box {
+  background: #f5f5f5;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  min-width: 22px;
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.circle-btn {
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  position: relative;
+  box-shadow: 0 4px 0 rgba(39, 174, 96, 0.25);
+}
+.plus {
+  background: #43c463;
+  box-shadow: 0 4px 0 #2e9e47;
+}
+.plus:hover {
+  background: #2e9e47;
+}
+.minus {
+  background: #e74c3c;
+  box-shadow: 0 4px 0 #b93a27;
+}
+.minus:hover {
+  background: #c0392b;
+}
+.minus.light {
+  background: #f7c5c5;
+  color: #e74c3c;
+  box-shadow: 0 4px 0 #e0a1a1;
+}
+
+.status-btn {
+  background: #f3f3f3;
+  padding: 5px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0 4px 0 #bdbdbd;
+  transition: background 0.2s;
+  position: relative;
+}
+.status-btn:hover {
+  background: #e0e0e0;
+}
+
+.delete-btn {
+  background: #e74c3c;
+  color: white;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 0 #b93a27;
+  transition: background 0.2s;
+  position: relative;
+}
+.delete-btn:hover {
+  background: #c0392b;
+}
+
+.summary h3 {
+  margin: 0 0 8px 0;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.summary-row {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #d3d3d3;
+  padding-bottom: 7px;
+}
+.summary-row:last-of-type {
+  border-bottom: none;
+}
+
+h3{
+	 border-bottom: 1px solid #d3d3d3;
+}
+
+.summary-item {
+  background: #f7f7f7;
+  border-radius: 7px;
+  padding: 4px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 0;
+}
+
+.badge {
+  background: orange;
+  padding: 1px 8px;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  margin-left: 4px;
 }

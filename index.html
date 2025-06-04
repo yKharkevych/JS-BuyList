@@ -8,9 +8,59 @@
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 <body>
-	<span class="product-item">
-		Apple
-		<span class="amount">4</span>
-	</span>
+  <div class="page-bg">
+    <div class="container">
+      <div class="main-list">
+        <div class="input-group">
+          <input type="text" placeholder="Назва товару">
+          <button class="add-btn">Додати</button>
+        </div>
+        <div class="item bought">
+          <span class="item-name crossed">Помідори</span>
+          <div class="controls">
+			<span class="count-box">2</span>
+		  </div>
+          <div class="status">
+			<button class="status-btn">Не куплено</button>
+		  </div>
+        </div>
+        <div class="item">
+          <span class="item-name">Печиво</span>
+          <div class="controls">
+            <button class="circle-btn minus">−</button>
+            <span class="count-box">2</span>
+            <button class="circle-btn plus">+</button>
+          </div>
+          <div class="status">
+			<button class="status-btn">Куплено</button>
+            <button class="delete-btn">✖</button>
+		  </div>
+        </div>
+        <div class="item">
+          <input class="inline-input" value="Сир">
+          <div class="controls">
+            <button class="circle-btn minus light">−</button>
+            <span class="count-box">1</span>
+            <button class="circle-btn plus">+</button>
+          </div>
+          <div class="status">
+			<button class="status-btn">Куплено</button>
+            <button class="delete-btn">✖</button>
+		  </div>
+        </div>
+      </div>
+      <div class="summary">
+        <h3>Залишилося</h3>
+        <div class="summary-row">
+          <div class="summary-item">Печиво <span class="badge">2</span></div>
+          <div class="summary-item">Сир <span class="badge">1</span></div>
+        </div>
+        <h3>Куплено</h3>
+        <div class="summary-row">
+          <div class="summary-item"><span class="crossed">Помідори</span> <span class="badge">2</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
