@@ -12,53 +12,16 @@
     <div class="container">
       <div class="main-list">
         <div class="input-group">
-          <input type="text" placeholder="Назва товару">
-          <button class="add-btn" data-tooltip="Додати товар">Додати</button>
+          <input id="item-input" type="text" placeholder="Назва товару">
+          <button id="add-btn" class="add-btn" data-tooltip="Додати товар">Додати</button>
         </div>
-        <div class="item bought">
-          <span class="item-name crossed">Помідори</span>
-          <div class="controls">
-			<span class="count-box">2</span>
-		  </div>
-          <div class="status">
-			<button class="status-btn" data-tooltip="Змінити статус">Не куплено</button>
-		  </div>
-        </div>
-        <div class="item">
-          <span class="item-name">Печиво</span>
-          <div class="controls">
-            <button class="minus" data-tooltip="Зменшити кількість">−</button>
-            <span class="count-box">2</span>
-            <button class="plus" data-tooltip="Збільшити кількість">+</button>
-          </div>
-          <div class="status">
-			<button class="status-btn" data-tooltip="Змінити статус">Куплено</button>
-            <button class="delete-btn" data-tooltip="Видалити">✖</button>
-		  </div>
-        </div>
-        <div class="item">
-          <input class="inline-input" value="Сир">
-          <div class="controls">
-            <button class="minus light" data-tooltip="Зменшити кількість">−</button>
-            <span class="count-box">1</span>
-            <button class="plus" data-tooltip="Збільшити кількість">+</button>
-          </div>
-          <div class="status">
-			<button class="status-btn" data-tooltip="Змінити статус">Куплено</button>
-            <button class="delete-btn" data-tooltip="Видалити">✖</button>
-		  </div>
-        </div>
+        <div id="items"></div>
       </div>
       <div class="summary">
         <h3>Залишилося</h3>
-        <div class="summary-row">
-          <div class="summary-item">Печиво <span class="count-badge">2</span></div>
-          <div class="summary-item">Сир <span class="count-badge">1</span></div>
-        </div>
+        <div id="left-list" class="summary-row"></div>
         <h3>Куплено</h3>
-        <div class="summary-row">
-          <div class="summary-item"><span class="crossed">Помідори</span> <span class="count-badge">2</span></div>
-        </div>
+        <div id="bought-list" class="summary-row"></div>
       </div>
     </div>
 
@@ -71,5 +34,6 @@
     </div>
 
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
